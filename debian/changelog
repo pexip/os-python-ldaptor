@@ -1,0 +1,5 @@
+python-ldaptor (21.2.0-0+pexip24u1) pexip; urgency=medium
+
+  * Prepare Pexip Packaging
+
+ -- Huw Jones <huw@pexip.com>  Tue, 28 May 2024 14:43:58 +0100

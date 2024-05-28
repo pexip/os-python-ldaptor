@@ -1,0 +1,13 @@
+diff --git a/ldaptor/config.py b/ldaptor/config.py
+index 1d5adcc..3a9e9f7 100644
+--- a/ldaptor/config.py
++++ b/ldaptor/config.py
+@@ -136,7 +136,7 @@ def loadConfig(configFiles=None, reload=False):
+     """
+     global __config
+     if __config is None or reload:
+-        x = configparser.SafeConfigParser()
++        x = configparser.ConfigParser()
+ 
+         for section, options in DEFAULTS.items():
+             x.add_section(section)

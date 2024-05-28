@@ -1,0 +1,18 @@
+See https://github.com/twisted/ldaptor/issues/238
+> After updating to Twisted 22.4, the test suite hangs at
+> testGetBaseDNNoOption producing as many temporary empty
+> config files as the filesystem would allow.
+
+diff --git a/ldaptor/test/test_config.py b/ldaptor/test/test_config.py
+index 21b1c66..9afee46 100644
+--- a/ldaptor/test/test_config.py
++++ b/ldaptor/test/test_config.py
+@@ -24,7 +24,7 @@ def reloadFromContent(testCase, content):
+     writeFile(config_path, content)
+ 
+     # Reload with empty content to reduce the side effects.
+-    testCase.addCleanup(reloadFromContent, testCase, b"")
++    #testCase.addCleanup(reloadFromContent, testCase, b"")
+ 
+     return config.loadConfig(
+         configFiles=[config_path],
