@@ -1,3 +1,9 @@
+python-ldaptor (21.2.0-0+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:54:22 +0100
+
 python-ldaptor (21.2.0-0+pexip24u1) pexip; urgency=medium
 
   * Prepare Pexip Packaging
