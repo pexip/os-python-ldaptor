@@ -1,0 +1,32 @@
+--- a/ldaptor/test/test_server.py
++++ b/ldaptor/test/test_server.py
+@@ -1015,22 +1015,22 @@
+         (attributeTypes, objectClasses) = util.pumpingDeferredResult(d)
+ 
+         self.failUnlessEqual(
+-            [to_bytes(x) for x in attributeTypes],
+-            [
++            {to_bytes(x) for x in attributeTypes},
++            {
+                 to_bytes(schema.AttributeTypeDescription(x))
+                 for x in [test_schema.AttributeType_KnownValues.knownValues[0][0]]
+-            ],
++            },
+         )
+ 
+         self.failUnlessEqual(
+-            [to_bytes(x) for x in objectClasses],
+-            [
++            {to_bytes(x) for x in objectClasses},
++            {
+                 to_bytes(schema.ObjectClassDescription(x))
+                 for x in [
+                     test_schema.OBJECTCLASSES["organization"],
+                     test_schema.OBJECTCLASSES["organizationalUnit"],
+                 ]
+-            ],
++            },
+         )
+ 
+-    testSimple.todo = "Not supported yet."
++    #testSimple.todo = "Not supported yet."
