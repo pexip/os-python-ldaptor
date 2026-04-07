@@ -1,3 +1,5 @@
+Skip injecting the examples in test suites
+
 diff --git a/ldaptor/test/test_examples.py b/ldaptor/test/test_examples.py
 index ecb10d4..8d1cfff 100644
 --- a/ldaptor/test/test_examples.py

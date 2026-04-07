@@ -1,3 +1,5 @@
+Fix testSimple for newer versions of Python
+
 --- a/ldaptor/test/test_server.py
 +++ b/ldaptor/test/test_server.py
 @@ -1015,22 +1015,22 @@
